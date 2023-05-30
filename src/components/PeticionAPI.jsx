@@ -35,3 +35,16 @@ const MarvelAPP = () => {
         <button onClick={() => setOffset(0)}>Primera Pagina</button>
         <button onClick={handlePrevious}>Anterior</button>
         <button onClick={handleNext}>Siguiente</button>
+        <div>
+        {characters.map(character => (
+          <div key={character.id}>
+            <h3>{character.name}</h3>
+            <img src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt={character.name} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default MarvelAPP;
