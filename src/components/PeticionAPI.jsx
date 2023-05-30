@@ -15,3 +15,16 @@ const MarvelAPP = () => {
       console.error('Error:', error);
     }
   };
+  const handleNext = () => {
+    setOffset(offset + 20);
+  };
+
+  const handlePrevious = () => {
+    if (offset > 0) {
+      setOffset(offset - 20);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, [offset]);
