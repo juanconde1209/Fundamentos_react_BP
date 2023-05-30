@@ -35,13 +35,17 @@ const MarvelAPP = () => {
         <button onClick={() => setOffset(0)}>Primera Pagina</button>
         <button onClick={handlePrevious}>Anterior</button>
         <button onClick={handleNext}>Siguiente</button>
+        <h2>Es posible que algunos Personajes arrojen una imagen con el mensaje "image not found" debido a que asi se encuentran guardadas dentro de la API de MARVEL.</h2>
         <div>
         {characters.map(character => (
           <div key={character.id}>
             <h3>{character.name}</h3>
-            <img src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt={character.name} />
+            <img src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt={character.name} />          
           </div>
         ))}
+        <button onClick={() => setOffset(0)}>Primera Pagina</button>
+        <button onClick={handlePrevious}>Anterior</button>
+        <button onClick={handleNext}>Siguiente</button>              
       </div>
     </div>
   );
