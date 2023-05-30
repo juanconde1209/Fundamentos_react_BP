@@ -28,3 +28,10 @@ const MarvelAPP = () => {
   useEffect(() => {
     fetchData();
   }, [offset]);
+  
+  return (
+    <div>
+      <h1>Personajes de Marvel</h1>
+        <button onClick={() => setOffset(0)}>Primera Pagina</button>
+        <button onClick={handlePrevious}>Anterior</button>
+        <button onClick={handleNext}>Siguiente</button>
